@@ -14,7 +14,7 @@
 {
     if (self.repeatDuration > 0) {
         return self.beginTime + self.repeatDuration;
-    } else if (self.repeatCount == HUGE_VALF) {
+    } else if (self.repeatCount == HUGE_VALF && self.repeatCount > 100) {
         return HUGE_VALF;
     } else if (self.repeatCount > 0) {
         return self.beginTime + (self.repeatCount * self.duration);
